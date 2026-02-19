@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management | POS PRO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/customer-style.css">
+</head>
+<body>
+
+<nav class="sidebar">
+    <div class="brand">
+        <i class="fas fa-bolt"></i>
+        <span>POS PRO</span>
+    </div>
+    <div class="nav-links">
+        <a href="../index.html"><i class="fas fa-chart-line"></i> Dashboard</a>
+        <a class="active" href="customer.html"><i class="fas fa-users"></i> Customers</a>
+        <a href="item.html"><i class="fas fa-box"></i> Items</a>
+        <a href="place-order.html"><i class="fas fa-shopping-cart"></i> Orders</a>
+    </div>
+</nav>
+
+<main class="main-content">
+    <header class="top-bar">
+        <div class="page-info">
+            <h1>Customer Management</h1>
+            <p>View and manage your client database</p>
+        </div>
+        <div class="user-profile">
+            <div class="status-dot"></div>
+            <span>Admin</span>
+            <div class="avatar">A</div>
+        </div>
+    </header>
+
+    <div class="dashboard-grid">
+        <section class="glass-card form-area">
+            <div class="card-header">
+                <i class="fas fa-user-plus"></i>
+                <h2>Registration</h2>
+            </div>
+            <form id="customer-form">
+                <div class="input-group">
+                    <label for="id">Customer ID</label>
+                    <input type="text" id="id" placeholder="C001">
+                </div>
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Dilum Shamilka">
+                </div>
+                <div class="input-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="Colombo">
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-add" onclick="saveCustomer()">Add New</button>
+                    <div class="btn-group">
+                        <button class="btn btn-update" onclick="updateCustomer()">Update</button>
+                        <button class="btn btn-delete" onclick="deleteCustomer()">Delete</button>
+                    </div>
+                    <button class="btn btn-clear" onclick="clearCustomer()">Clear Fields</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="glass-card table-area">
+            <div class="card-header">
+                <i class="fas fa-database"></i>
+                <h2>Customer Database</h2>
+            </div>
+            <div class="table-wrapper">
+                <table id="customer-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Full Name</th>
+                        <th>Address</th>
+                    </tr>
+                    </thead>
+                    <tbody id="customer-list">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../js/customer-script.js"></script>
+</body>
+</html>

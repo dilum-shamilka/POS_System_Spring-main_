@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Management | POS PRO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/item-style.css">
+</head>
+<body>
+
+<nav class="sidebar">
+    <div class="brand">
+        <div class="logo-icon"><i class="fas fa-bolt"></i></div>
+        <span>POS PRO</span>
+    </div>
+    <div class="nav-links">
+        <a href="../index.html"><i class="fas fa-home"></i> DashBoard</a>
+        <a href="customer.html"><i class="fas fa-users"></i> Customers</a>
+        <a class="active" href="item.html"><i class="fas fa-boxes"></i> Items</a>
+        <a href="place-order.html"><i class="fas fa-shopping-cart"></i> Orders</a>
+    </div>
+</nav>
+
+<main class="main-content">
+    <header class="top-bar">
+        <div class="title-section">
+            <h1>Item Management</h1>
+            <p>Dashboard / Inventory Control</p>
+        </div>
+        <div class="user-profile">
+            <div class="user-info">
+                <span class="name">Admin</span>
+                <span class="status">Online</span>
+            </div>
+            <div class="avatar">A</div>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <section class="glass-card form-container">
+            <div class="card-header">
+                <i class="fas fa-plus-circle"></i>
+                <h2>Item Details</h2>
+            </div>
+            <form id="item-form">
+                <div class="input-group">
+                    <label>Item ID</label>
+                    <input type="text" id="id" placeholder="I001">
+                </div>
+                <div class="input-group">
+                    <label>Item Name</label>
+                    <input type="text" id="name" placeholder="Book">
+                </div>
+                <div class="input-group">
+                    <label>Quantity</label>
+                    <input type="number" id="qty" placeholder="0">
+                </div>
+                <div class="input-group">
+                    <label>Unit Price (LKR)</label>
+                    <input type="number" step="0.01" id="price" placeholder="0.00">
+                </div>
+
+                <div class="button-grid">
+                    <button type="button" class="btn btn-add" onclick="saveItem()">Add Item</button>
+                    <button type="button" class="btn btn-update" onclick="updateItem()">Update</button>
+                    <button type="button" class="btn btn-delete" onclick="deleteItem()">Delete</button>
+                    <button type="button" class="btn btn-clear" onclick="clearItem()">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="glass-card table-container">
+            <div class="card-header">
+                <i class="fas fa-inventory"></i>
+                <h2>Stock Overview</h2>
+            </div>
+            <div class="table-wrapper">
+                <table id="item-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Item Name</th>
+                        <th>Qty</th>
+                        <th>Unit Price</th>
+                    </tr>
+                    </thead>
+                    <tbody id="item-list">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../js/item-script.js"></script>
+</body>
+</html>

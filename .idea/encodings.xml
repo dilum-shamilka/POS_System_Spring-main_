@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/02_Spring_Bean_LifeCycle/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/02_Spring_Bean_LifeCycle/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/03_Dependency_Injection/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/03_Dependency_Injection/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/04_FullMode_Vs_LightMode/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/04_FullMode_Vs_LightMode/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/05_Configuration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/05_Configuration/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/06_Runtime_Value_Injection/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/06_Runtime_Value_Injection/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/07_Spring_Environment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/07_Spring_Environment/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/09_REST_Controller/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/09_REST_Controller/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/POS_System_Spring-main/11_Back_End/src/main/java" charset="UTF-8" />
+  </component>
+</project>

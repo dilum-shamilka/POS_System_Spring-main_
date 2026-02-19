@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order | POS PRO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/order-style.css">
+</head>
+<body>
+
+<nav class="sidebar">
+    <div class="brand">
+        <div class="logo-icon"><i class="fas fa-bolt"></i></div>
+        <span>POS PRO</span>
+    </div>
+    <div class="nav-links">
+        <a href="../index.html"><i class="fas fa-home"></i> DashBoard</a>
+        <a href="customer.html"><i class="fas fa-users"></i> Customers</a>
+        <a href="item.html"><i class="fas fa-boxes"></i> Items</a>
+        <a class="active" href="place-order.html"><i class="fas fa-shopping-cart"></i> Orders</a>
+    </div>
+</nav>
+
+<main class="main-content">
+    <header class="top-bar">
+        <div class="title-section">
+            <h1>Place New Order</h1>
+            <p>Transaction Entry</p>
+        </div>
+        <div class="user-profile">
+            <div class="user-info">
+                <span class="name">Admin</span>
+                <span class="status">Online</span>
+            </div>
+            <div class="avatar">A</div>
+        </div>
+    </header>
+
+    <div class="order-grid">
+        <div class="order-left-column">
+
+            <section class="glass-card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-user-check"></i>
+                    <h2>Step 1: Select Customer</h2>
+                </div>
+                <div class="input-row">
+                    <select id="order-customer" class="modern-select">
+                        <option value="" disabled selected>Choose a customer...</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="glass-card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-cart-plus"></i>
+                    <h2>Step 2: Add Items</h2>
+                </div>
+                <div class="table-wrapper">
+                    <table id="order-item-table">
+                        <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Sub Total</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody id="order-item-list"></tbody>
+                    </table>
+                </div>
+                <div class="table-actions">
+                    <button class="btn btn-secondary" onclick="addItemRow()">
+                        <i class="fas fa-plus"></i> Add Row
+                    </button>
+                    <button class="btn btn-danger-outline" onclick="clearItems()">
+                        <i class="fas fa-trash-alt"></i> Clear All
+                    </button>
+                </div>
+            </section>
+
+            <section class="glass-card history-card">
+                <div class="card-header">
+                    <i class="fas fa-history"></i>
+                    <h2>Recent Orders</h2>
+                </div>
+                <div class="mini-table-wrapper">
+                    <table id="order-history">
+                        <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer ID</th>
+                            <th>Date</th>
+                            <th>Total</th>
+                        </tr>
+                        </thead>
+                        <tbody id="order-history-list">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <aside class="order-right-column">
+            <section class="glass-card summary-card sticky-sidebar">
+                <div class="card-header">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h2>Order Summary</h2>
+                </div>
+
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Order ID</span>
+                        <strong id="order-id">O001</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Date</span>
+                        <input type="date" id="order-date" class="modern-input">
+                    </div>
+                    <hr class="divider">
+                    <div class="total-section">
+                        <label>Net Total</label>
+                        <div class="total-value">LKR <span id="order-total">0.00</span></div>
+                    </div>
+                </div>
+
+                <button class="btn btn-place-order" onclick="saveOrder()">
+                    Confirm & Place Order
+                </button>
+            </section>
+        </aside>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="../js/order-script.js"></script>
+</body>
+</html>
